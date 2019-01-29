@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
   # your code here
   attr_accessor :sender
@@ -22,9 +24,11 @@ class Transfer
       @status = "rejected"
     else
     @status = "complete"
+    end
   end
 
-
+  def reverse_transfer
+    binding.pry
 
   end
 
