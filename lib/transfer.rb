@@ -24,11 +24,12 @@ class Transfer
       @status = "rejected"
     else
     @status = "complete"
+      binding.pry
     end
   end
 
   def reverse_transfer
-    binding.pry
+
 
   end
 
