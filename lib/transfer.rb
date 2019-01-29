@@ -18,6 +18,8 @@ class Transfer
   def execute_transaction
     receiver.deposit(@amount)
     sender.balance = sender.balance - @amount
+    if !self.valid?
+      @status = "Transaction rejected. Please check your account balance."
     @status = "complete"
 
 
