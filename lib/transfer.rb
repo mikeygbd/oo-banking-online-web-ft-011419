@@ -33,7 +33,7 @@ class Transfer
 
   def reverse_transfer
     if @status = "complete"
-      execute_transaction.reverse
+      execute_transaction.clear
     # receiver.balance = receiver.balance - amount
     # sender.deposit(amount)
     @status = "reversed"
