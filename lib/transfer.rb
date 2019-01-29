@@ -21,8 +21,8 @@ class Transfer
     receiver.deposit(amount)
     sender.balance = sender.balance - @amount
     if !sender.valid? || !receiver.valid?
-      "Transaction rejected. Please check your account balance."
-      @status = "rejected"
+
+      @status = "rejected" && "Transaction rejected. Please check your account balance."
     else
     @status = "complete"
       # binding.pry
