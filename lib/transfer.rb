@@ -26,6 +26,7 @@ class Transfer
     @status = "complete"
       # binding.pry
     end
+    sender.balance
   end
 
   def reverse_transfer
