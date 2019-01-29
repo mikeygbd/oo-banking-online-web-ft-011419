@@ -12,14 +12,8 @@ class Transfer
   end
 
   def valid?
-    if sender.balance > @amount && sender.valid? && receiver.valid?
-      true
-    else
-
-
-
-
-
-    end
+   sender.balance > @amount && sender.valid? && receiver.valid?
   end
+
+  def
 end
