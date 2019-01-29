@@ -15,5 +15,5 @@ class Transfer
    sender.balance > @amount && sender.valid? && receiver.valid?
   end
 
-  def
+  
 end
