@@ -1,20 +1,21 @@
 class Transfer
   # your code here
   attr_accessor :sender
-  attr_reader :amount, :receiver, :transfer, :status
+  attr_reader :amount, :receiver, :status
 
-  def initialize(sender, receiver, status)
-    
+  def initialize(sender, receiver, amount)
+
     @receiver = receiver
     @sender = sender
     @status = "pending"
-    @amount = 50
+    @amount = amount
   end
 
   def valid?
-    if sender.account > @amount
+    if sender.balance > @amount && sender.valid?
       true
-    elsif condition
+    else
+
 
 
 
