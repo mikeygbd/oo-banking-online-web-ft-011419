@@ -16,7 +16,7 @@ class Transfer
   end
 
   def execute_transaction
-    receiver.BankAccount.deposit(amount)
+    receiver.deposit(amount)
     sender.balance = sender.balance - @amount
     if !sender.valid?
       @status = "rejected"
