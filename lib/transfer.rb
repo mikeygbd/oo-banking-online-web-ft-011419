@@ -20,7 +20,7 @@ class Transfer
   def execute_transaction
     receiver.deposit(amount)
     sender.balance = sender.balance - @amount
-    if !sender.valid? || !receiver.valid? || @amount > amount
+    if !sender.valid? || !receiver.valid? || sender.balance < (sender.balance - @amount)
 
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
