@@ -37,6 +37,7 @@ class Transfer
     sender.deposit(amount)
     @status = "reversed"
   end
+  end
 
 
 end
